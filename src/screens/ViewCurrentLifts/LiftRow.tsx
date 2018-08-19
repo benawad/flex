@@ -45,6 +45,7 @@ export class LiftRow extends React.PureComponent<Props, State> {
           {liftAmounts.map((n, i) => (
             <TouchableOpacity
               key={`${i}-n`}
+              style={{ padding: 15 }}
               onPress={() =>
                 this.setState({
                   showPlatesFor: this.state.showPlatesFor === n ? null : n

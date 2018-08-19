@@ -57,7 +57,6 @@ export class LiftForm extends React.PureComponent<Props> {
                 <Field
                   style={styles.field}
                   name={x}
-                  placeholder={x}
                   keyboardType="numeric"
                   component={TextInputField}
                 />

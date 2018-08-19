@@ -575,6 +575,14 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-1.2.0.tgz#81a6731ce4df43619e5c8c945383b3e62a89ea86"
 
+"@types/expo@^27.0.8":
+  version "27.0.8"
+  resolved "https://registry.yarnpkg.com/@types/expo/-/expo-27.0.8.tgz#c8780b665eb5785689e6444c23a8ae2c9bd39e07"
+  dependencies:
+    "@types/fbemitter" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
+
 "@types/expo__vector-icons@^6.2.3":
   version "6.2.3"
   resolved "https://registry.yarnpkg.com/@types/expo__vector-icons/-/expo__vector-icons-6.2.3.tgz#68f2018a40dcfccb9bae79461080cc4d129b451f"
@@ -582,6 +590,10 @@
     "@types/react" "*"
     "@types/react-native" "*"
     "@types/react-native-vector-icons" "*"
+
+"@types/fbemitter@*":
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/@types/fbemitter/-/fbemitter-2.0.32.tgz#8ed204da0f54e9c8eaec31b1eec91e25132d082c"
 
 "@types/glob@*":
   version "5.0.35"

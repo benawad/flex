@@ -6,6 +6,7 @@ import isWednesday from "date-fns/is_wednesday";
 import isFriday from "date-fns/is_friday";
 // tslint:disable-next-line:no-implicit-dependencies
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Constants } from "expo";
 
 import { LState } from "../../states/LState";
 import { LiftRow } from "./LiftRow";
@@ -28,7 +29,7 @@ export class ViewCurrentLifts extends React.PureComponent {
     const isWed = isWednesday(today);
     const isFrid = isFriday(today);
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, paddingTop: Constants.statusBarHeight }}>
         <View style={{ alignItems: "center" }}>
           <Text>{format(today, "dddd, MMM Do")}</Text>
         </View>
