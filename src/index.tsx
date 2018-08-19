@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createSwitchNavigator } from "react-navigation";
 import { Provider } from "unstated";
+import { SafeAreaView } from "react-native";
 
 import { PickStartingWeights } from "./screens/PickStartingWeights";
 import { Initial } from "./screens/Initial";
@@ -21,6 +22,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider>
+        <SafeAreaView />
         <RootStack />
       </Provider>
     );

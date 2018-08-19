@@ -42,7 +42,7 @@ export class LState extends Container<State> {
       currentLifts: lv
     });
 
-  setLiftsForToday = (lv: LiftValues) => {
+  saveLiftsForToday = (lv: LiftValues) => {
     this.saveState(state => ({
       allLifts: {
         ...state.allLifts,
