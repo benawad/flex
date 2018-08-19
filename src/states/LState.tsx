@@ -20,7 +20,7 @@ type SetStateParameter =
   | null;
 
 export class LState extends Container<State> {
-  state = {
+  state: State = {
     currentLifts: {
       squat: 0,
       bench: 0,

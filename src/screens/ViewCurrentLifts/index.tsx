@@ -4,6 +4,8 @@ import format from "date-fns/format";
 import { ScrollView, Button, View, Text } from "react-native";
 import isWednesday from "date-fns/is_wednesday";
 import isFriday from "date-fns/is_friday";
+// tslint:disable-next-line:no-implicit-dependencies
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { LState } from "../../states/LState";
 import { LiftRow } from "./LiftRow";
@@ -13,8 +15,14 @@ import {
   fridayLift,
   mondayLift
 } from "../../utils/createLiftAmounts";
+import { LiftValues } from "../../types/LiftValues";
 
 export class ViewCurrentLifts extends React.PureComponent {
+  static navigationOptions = {
+    tabBarIcon: <MaterialCommunityIcons name="dumbbell" size={20} />,
+    tabBarLabel: "lift"
+  };
+
   render() {
     const today = new Date();
     const isWed = isWednesday(today);

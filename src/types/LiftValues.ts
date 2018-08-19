@@ -1,4 +1,4 @@
-interface LiftValues {
+export interface LiftValues {
   squat: number;
   bench: number;
   deadlift: number;

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
-import { calcWarmup } from "../../utils/calcWarmup";
 import { optimizeNumPlates } from "../../utils/optimizeNumPlates";
 
 interface Props {
@@ -61,10 +60,12 @@ export class LiftRow extends React.PureComponent<Props, State> {
           ))}
         </View>
         {this.state.showPlatesFor ? (
-          <View>
-            <Text>
-              {JSON.stringify(optimizeNumPlates(this.state.showPlatesFor || 0))}
-            </Text>
+          <View style={{ justifyContent: "center", alignItems: "center" }}>
+            {Object.entries(
+              optimizeNumPlates(this.state.showPlatesFor || 0)
+            ).map(([k, v]) => (
+              <Text key={`${k}-plate`}>{`${k}x${v}`}</Text>
+            ))}
           </View>
         ) : null}
       </View>
